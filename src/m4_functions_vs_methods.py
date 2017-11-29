@@ -82,6 +82,7 @@ def main():
     turtle3()
     try_methods()
     try_functions()
+    try_methods_and_functions()
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
 
@@ -174,7 +175,7 @@ def try_methods():
     """
 
     Greg = rg.SimpleTurtle()
-    Greg.Pen('brown',5)
+    Greg.pen = rg.Pen('brown',5)
     Greg.forward(150)
     Greg.left(90)
     Greg.forward(50)
@@ -193,8 +194,11 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200,0,0)
+    jump_and_move_turtle(-50,50,100,100)
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -239,14 +243,32 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    Phil = rg.SimpleTurtle()
+    Phil.pen = rg.Pen('blue',5)
+    Phil.backward(150)
+    Phil.speed = 1
+    draw_many_squares(Phil,2,100,30)
+    Phil.speed = 5
+    Phil.pen = rg.Pen('red', 5)
+    draw_many_squares(Phil,10,50,15)
+    Phil.speed = 100
+    Phil.pen = rg.Pen('red',35)
+    draw_many_squares(Phil,8,300,60)
+    Phil.pen = rg.Pen('black',3)
+    Phil.backward(200)
+    Phil.draw_circle(30)
+    Phil.draw_square(50)
+
+
+
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
     #
     # IMPORTANT: This function should ** CALL ** the
-    #   draw_many_squares
+    #   draw_many_squares)
     # function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ####################################################################
